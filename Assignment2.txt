@@ -1,0 +1,26 @@
+Name node
+1)stores metadata for HDFS
+2)Whenever a file is placed in the cluster a corresponding entry of it location is maintained by the NameNode
+3)Automated Failover : pro-actively detects NameNode host and process failures and will automatically switch to the standby NameNode to maintain availability for the HDFS service.
+4)Full Stack Resiliency: made in such a way to avoid losing data.
+5)
+Data node
+1)stores actual data in HDFS
+2)For high availability due to replication
+3)It sends information to the NameNode about the files and blocks stored in that node
+4)Respond to namenode for filesystem opertions
+5)
+
+Resource Manager
+1)allocate CPU,memory for container--tracking resoucres 
+2)scheduling the jobs
+3)ApplicationMasters are responsible for negotiating resources with the ResourceManager
+4)NodeManagers take instructions from the ResourceManager and manage resources available on a single node.
+5)
+
+Node manager 
+1)keep node manager up to date with resource manager
+2)Oversee life cycle management
+3)monitoring resource usage (memory, CPU) of individual containers
+4)log’s management 
+5)tracking node-health
